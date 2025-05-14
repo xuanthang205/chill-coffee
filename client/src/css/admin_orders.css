@@ -1,0 +1,112 @@
+/* src/css/admin_orders.css */
+/* .sidebar {
+  background-color: var(--color-grey-light);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  padding: 10px 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: var(--color-black);
+  font-weight: 500;
+  display: block;
+  padding: 8px 16px;
+}
+
+.menu li a:hover {
+  color: var(--color-primary);
+  background-color: var(--color-grey);
+  border-radius: 4px;
+}
+
+.content {
+  margin-left: 16.67%;
+} 
+*/
+
+
+/* Cải thiện giao diện bảng */
+.product-table {
+  background-color: var(--color-white);
+}
+
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table th, .table td {
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
+  padding: 12px; /* Tăng padding cho thoải mái */
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease; /* Hiệu ứng hover mượt mà */
+}
+
+.table tbody tr:hover {
+  background-color: #f5f5f5; /* Màu nền khi hover */
+}
+
+/* Tùy chỉnh select trạng thái */
+.slt-order-status {
+  padding: 6px 12px;
+  border-radius: 4px; /* Dùng rounded-sm từ main.css */
+  border: 1px solid var(--color-grey);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.slt-order-status:hover {
+  border-color: var(--color-primary);
+}
+
+.slt-order-status:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 4px rgba(127, 161, 195, 0.5); /* Dùng màu primary nhạt */
+}
+
+/* Màu sắc khác nhau cho từng trạng thái */
+.slt-order-status option[value="0"] {
+  color: #ff9800; /* Chờ xác nhận: Cam */
+}
+
+.slt-order-status option[value="1"] {
+  color: #2196f3; /* Chờ vận chuyển: Xanh dương */
+}
+
+.slt-order-status option[value="2"] {
+  color: #4caf50; /* Đã nhận hàng: Xanh lá */
+}
+
+.slt-order-status option[value="3"] {
+  color: var(--color-danger); /* Đã hủy: Đỏ từ main.css */
+}
+
+/* Tùy chỉnh giao diện dòng sản phẩm */
+.product-item td, .product-item th {
+  border-bottom: 1px solid var(--color-grey-light);
+}
+
+.product-item th {
+  font-weight: 500;
+}
+
+.content-admin {
+  margin-left: 16.67%;
+}

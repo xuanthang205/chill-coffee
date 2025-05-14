@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trang chủ | Chill Coffee</title>
+
+        <link
+            rel="shortcut icon"
+            href="./src/img/coffee-cup.png"
+            type="image/x-icon"
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Boostrap 5 CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+            crossorigin="anonymous"
+        />
+
+        <!-- Font Awesome CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <link rel="stylesheet" href="./src/css/main.css" />
+        <link rel="stylesheet" href="./src/css/index.css" />
+        <link rel="stylesheet" href="./src/css/responsive.css" />
+    </head>
+
+    <body>
+        <div class="page-wrapper">
+            <header>
+                <div class="container d-flex justify-content-between align-items-center py-3">
+                    <a href="#" class="logo">
+                        <img
+                            src="./src/img/coffee-cup.png"
+                            alt="Chill Coffee Logo"
+                            class="icon"
+                        />
+                        <p class="title">
+                            <span class="title strong">Chill</span> Coffee
+                        </p>
+                    </a>
+                    <div class="overlay d-sm-none"></div>
+
+                    <ul class="header-nav nav align-items-center">
+                        <li class="d-flex align-items-center justify-content-between d-sm-none li-top">
+                            <a href="#" class="logo">
+                                <img
+                                    src="./src/img/coffee-cup.png"
+                                    alt="Chill Coffee Logo"
+                                    class="icon"
+                                />
+                                <p class="title">
+                                    <span class="title strong">Chill</span> Coffee
+                                </p>
+                            </a>
+                            <button id="close-menu-mb-btn" class="d-md-none close-mb-btn">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                href="./index.html"
+                                class="nav-link text-white"
+                                ><i class="fas fa-home d-sm-none"></i>
+                                Trang chủ</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                href="./menu.html"
+                                class="nav-link text-white"
+                                ><i class="fas fa-coffee d-sm-none"></i>Menu</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                href="./order_history.html"
+                                class="nav-link text-white"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i><span class="d-sm-none">Lịch sử đơn hàng</span>
+                            </a>
+                        </li>
+                        <li class="profile">
+                            <button
+                                class="dropdown-toggle btn btn-outline-light mb-profile"
+                                type="button"
+                                id="profile-dropdown"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <i class="fa-solid fa-user d-sm-none"></i>
+                                Tài khoản
+                            </button>
+                            <ul
+                                id="author-menu-drd"
+                                class="dropdown-menu"
+                                aria-labelledby="profile-dropdown"
+                            >
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="./login.html"
+                                        >Đăng nhập</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="./register.html"
+                                        >Đăng ký</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button
+                        id="menu-mb-btn"
+                        class="text-white d-sm-none menu-mb-icon"
+                        type="button">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </header>
+            <div class="banner-group">
+                <div class="container">
+                    <div class="banner-content d-flex align-items-center">
+                        <div class="banner-text text-md-start">
+                            <h1 class="title text-white">
+                                Chào mừng đến với
+                                <span class="title strong">Chill Coffee</span>
+                            </h1>
+                            <p class="text-white mt-md-3 fs-md-5 desc">
+                                Thưởng thức cà phê chất lượng cao, nhanh chóng và tiện
+                                lợi!
+                            </p>
+                            <a
+                                href="./menu.html"
+                                class="btn banner-btn btn-primary px-4 py-2 px-md-5 py-md-3 rounded-pill mt-4 fw-bold"
+                                >Mua ngay</a
+                            >
+                        </div>
+                        <img src="./src/img/coffee-decor-index.png" alt="" class="banner-decor">
+                    </div>
+                </div>
+            </div>
+
+            <section class="container mt-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-12 mb-4">
+                        <iframe
+                            class="rounded-md w-100"
+                            height="315"
+                            src="https://www.youtube.com/embed/f8ZzdPJ6gC0"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <h2 class="text-color-primary">
+                            Chill Coffee - Vị cà phê, chất chill
+                        </h2>
+                        <p class="text-muted">
+                            Nơi bắt đầu ngày mới thật chill, với hương vị đậm đà và không gian đầy cảm hứng.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container my-3 my-md-5">
+                <h3 class="text-center mb-3 mb-md-4 text-color-primary">Sản phẩm mới nhất</h3>
+                <div class="product-list row g-4 py-4">
+                    <!-- <div class="product-item col-md-3 col-6">
+                    <div class="content p-2">
+                        <img src="./src/img/tra-sen-vang.png" alt="tra sen vang" class="img-fluid rounded">
+                        <div class="text p-2">
+                            <div class="d-flex justify-content-between flex-column align-items-center">
+                                <h5 class="mb-2 text-uppercase">Trà sen vàng</h5>
+                                <p class="mb-3">Giá: <span class="fs-6 fw-semibold text-danger">50.000 đ</span></p>
+                            </div>
+                            <button class="btn btn-primary btn-order mt-2 w-100" data-id="">Đặt hàng</button>
+                        </div>
+                    </div>
+                </div> -->
+                </div>
+                <div class="order-form">
+                    <!-- <div class="p-3 bg-light rounded shadow">
+                    <button class="btn btn-outline-dark btn-cancel mb-3">Đóng</button>
+                    <div class="row">
+                        <div class="col-md-4 col-12 mb-3">
+                            <img src="./src/img/tra-sen-vang.png" alt="tra-sen-vang" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-8 col-12">
+                            <h5>Trà sen vàng</h5>
+                            <p>Giá: 50.000 đ</p>
+                            <form id="order-form">
+                                <div class="mb-3">
+                                    <label for="quantity" class="form-label">Số lượng</label>
+                                    <input type="number" class="form-control" id="quantity" value="1" min="1" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-confirm-order w-100"
+                                    data-price="">Xác nhận</button>
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
+                </div>
+            </section>
+
+            <footer class="bg-dark text-white py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="#" class="logo justify-content-sm-start">
+                                <img
+                                    src="./src/img/coffee-cup.png"
+                                    alt="Chill Coffee Logo"
+                                    class="icon"
+                                />
+                                <p class="title">
+                                    <span class="title strong">Chill</span>
+                                    Coffee
+                                </p>
+                            </a>
+                            <p class="pt-3">"Chill Coffee – nơi không gian và hương vị hoà quyện, mang đến cho bạn những phút giây thư giãn tuyệt vời."</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h5 class="mt-4 mt-sm-0 text-center text-sm-start">Liên hệ</h5>
+                            <p class="mt-3">
+                                Địa chỉ: Số ... phố Lê Thanh Nghị, Hai Bà Trưng,
+                                Hà Nội
+                            </p>
+                            <p>
+                                Hotline:
+                                <a href="tel:026 3440 576" class="text-white">
+                                    026 3440 576
+                                </a>
+                            </p>
+                            <p>Giờ mở cửa: 8:00 - 22:00</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h5 class="mt-4 mt-sm-0 text-center text-sm-start">Đăng ký nhận tin</h5>
+                            <div class="input-group mt-3 mb-3">
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="Nhập email của bạn"
+                                />
+                                <button class="btn btn-primary" type="button">
+                                    Gửi
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h5 class="mt-4 mt-sm-0 text-center text-sm-start">Theo dõi Chill Coffee</h5>
+                            <ul class="d-flex align-items-center list-unstyled mt-3 justify-content-sm-start">
+                                <li>
+                                    <a href="#!" class="icon text-white fs-5">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="icon text-white fs-5">
+                                        <i class="fa-brands fa-tiktok"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="icon text-white fs-5"><i class="fa-brands fa-youtube"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <p class="text-light mb-0">
+                            &copy; 2025 Coffee Express. All rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Boostrap 5 JS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+            crossorigin="anonymous"
+        ></script>
+
+        <script type="module" src="./src/js/firebase-config.js"></script>
+        <script type="module" src="./src/js/index.js"></script>
+        <script type="module" src="./src/js/main.js"></script>
+    </body>
+</html>

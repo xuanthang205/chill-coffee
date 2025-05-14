@@ -1,0 +1,50 @@
+.balance-info {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey-light);
+  }
+  
+  .balance-number {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+  
+  #balance-form {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey-light);
+  }
+  
+  #balance-form .form-control,
+  #balance-form select {
+    border-color: var(--color-grey-light);
+  }
+  
+  #balance-form .form-control:focus,
+  #balance-form select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 5px rgba(127, 161, 195, 0.5); /* Dùng màu primary nhạt */
+  }
+  
+  .transaction-history {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey-light);
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .transaction-list .transaction-item {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-grey-light);
+  }
+  
+  .transaction-list .transaction-item:last-child {
+    border-bottom: none;
+  }
+  
+  .transaction-list .transaction-item span {
+    font-size: 0.9rem;
+  }
+  
+  .transaction-list .transaction-item .amount {
+    font-weight: 600;
+  }
