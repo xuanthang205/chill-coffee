@@ -99,8 +99,6 @@ async function getOrderList() {
     document.querySelector('.order-list').innerHTML = '<p class="text-center text-danger">Lỗi tải danh sách đơn hàng.</p>';
   }
 }
-
-
 // Gọi hàm tải danh sách đơn hàng khi trang tải
 document.addEventListener('DOMContentLoaded', () => {
   getOrderList();

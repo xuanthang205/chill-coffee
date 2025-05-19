@@ -12,13 +12,27 @@ document.addEventListener('DOMContentLoaded', () => {
   if (userSession) {
     const now = new Date().getTime();
     if (now < userSession.expiry) {
-      // Cập nhật dropdown khi người dùng đã đăng nhập
-      profileDropdown.innerHTML = `
-        <li class="bg-grey-light"><span class="dropdown-item">${userSession.user.email}</span></li>
-        <li><a class="dropdown-item" href="./order_history.html">Lịch sử đơn hàng</a></li>
-        <li><a class="dropdown-item" href="./wallet.html">Ví</a></li>
-        <li><button id="logout-btn" class="btn text-danger w-100 text-start">Đăng xuất</button></li>
-      `;
+      // Build dropdown html theo role_id
+      let dropdownHtml = ``;
+
+      if (userSession.user.id === 1) {
+        dropdownHtml += `
+          <li class="bg-grey-light"><span class="dropdown-item name">${userSession.user.email}</span></li>
+          <li><a class="dropdown-item" href="./order_history.html">Lịch sử đơn hàng</a></li>
+          <li><a class="dropdown-item" href="./wallet.html">Ví</a></li>
+          <li><a class="dropdown-item" href="./admin.html">Trang Admin</a></li>
+          <li><button id="logout-btn" class="btn text-danger w-100 text-start">Đăng xuất</button></li>
+        `;
+      } else {
+        dropdownHtml += `
+          <li class="bg-grey-light"><span class="dropdown-item name">${userSession.user.email}</span></li>
+          <li><a class="dropdown-item" href="./order_history.html">Lịch sử đơn hàng</a></li>
+          <li><a class="dropdown-item" href="./wallet.html">Ví</a></li>
+          <li><button id="logout-btn" class="btn text-danger w-100 text-start">Đăng xuất</button></li>
+        `;
+      }
+
+      profileDropdown.innerHTML = dropdownHtml;
 
       // Xử lý đăng xuất
       document.getElementById('logout-btn').addEventListener('click', () => {

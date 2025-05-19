@@ -31,7 +31,7 @@ function handleRegister(event) {
             const userData = {
                 username,
                 email,
-                password, // Lưu ý: Trong thực tế, không lưu password plaintext => mã hóa
+                password, //Thực tế, không lưu password plaintext => mã hóa
                 role_id,
                 balance: 0,
             };

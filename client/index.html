@@ -43,47 +43,46 @@
     <body>
         <div class="page-wrapper">
             <header>
-                <div class="container d-flex justify-content-between align-items-center py-3">
+                <div
+                    class="container d-flex justify-content-between align-items-center py-3"
+                >
                     <a href="#" class="logo">
                         <img
                             src="./src/img/coffee-cup.png"
                             alt="Chill Coffee Logo"
                             class="icon"
                         />
-                        <p class="title">
-                            <span class="title strong">Chill</span> Coffee
-                        </p>
+                        <p class="title">Chill Coffee</p>
                     </a>
                     <div class="overlay d-sm-none"></div>
 
                     <ul class="header-nav nav align-items-center">
-                        <li class="d-flex align-items-center justify-content-between d-sm-none li-top">
+                        <li
+                            class="d-flex align-items-center justify-content-between d-sm-none li-top"
+                        >
                             <a href="#" class="logo">
                                 <img
                                     src="./src/img/coffee-cup.png"
                                     alt="Chill Coffee Logo"
                                     class="icon"
                                 />
-                                <p class="title">
-                                    <span class="title strong">Chill</span> Coffee
-                                </p>
+                                <p class="title">Chill Coffee</p>
                             </a>
-                            <button id="close-menu-mb-btn" class="d-md-none close-mb-btn">
+                            <button
+                                id="close-menu-mb-btn"
+                                class="d-md-none close-mb-btn"
+                            >
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </li>
                         <li class="nav-item">
-                            <a
-                                href="./index.html"
-                                class="nav-link text-white"
-                                ><i class="fas fa-home d-sm-none"></i>
-                                Trang chủ</a
+                            <a href="./index.html" class="nav-link text-white"
+                                ><i class="fas fa-home d-sm-none"></i> Trang
+                                chủ</a
                             >
                         </li>
                         <li class="nav-item">
-                            <a
-                                href="./menu.html"
-                                class="nav-link text-white"
+                            <a href="./menu.html" class="nav-link text-white"
                                 ><i class="fas fa-coffee d-sm-none"></i>Menu</a
                             >
                         </li>
@@ -92,7 +91,8 @@
                                 href="./order_history.html"
                                 class="nav-link text-white"
                             >
-                                <i class="fa-solid fa-cart-shopping"></i><span class="d-sm-none">Lịch sử đơn hàng</span>
+                                <i class="fa-solid fa-cart-shopping"></i
+                                ><span class="d-sm-none">Lịch sử đơn hàng</span>
                             </a>
                         </li>
                         <li class="profile">
@@ -112,9 +112,7 @@
                                 aria-labelledby="profile-dropdown"
                             >
                                 <li>
-                                    <a
-                                        class="dropdown-item"
-                                        href="./login.html"
+                                    <a class="dropdown-item" href="./login.html"
                                         >Đăng nhập</a
                                     >
                                 </li>
@@ -131,7 +129,8 @@
                     <button
                         id="menu-mb-btn"
                         class="text-white d-sm-none menu-mb-icon"
-                        type="button">
+                        type="button"
+                    >
                         <i class="fa-solid fa-bars"></i>
                     </button>
                 </div>
@@ -141,12 +140,11 @@
                     <div class="banner-content d-flex align-items-center">
                         <div class="banner-text text-md-start">
                             <h1 class="title text-white">
-                                Chào mừng đến với
-                                <span class="title strong">Chill Coffee</span>
+                                Chào mừng đến với Chill Coffee
                             </h1>
                             <p class="text-white mt-md-3 fs-md-5 desc">
-                                Thưởng thức cà phê chất lượng cao, nhanh chóng và tiện
-                                lợi!
+                                Thưởng thức cà phê chất lượng cao, nhanh chóng
+                                và tiện lợi!
                             </p>
                             <a
                                 href="./menu.html"
@@ -154,7 +152,11 @@
                                 >Mua ngay</a
                             >
                         </div>
-                        <img src="./src/img/coffee-decor-index.png" alt="" class="banner-decor">
+                        <img
+                            src="./src/img/coffee-decor-index.png"
+                            alt=""
+                            class="banner-decor"
+                        />
                     </div>
                 </div>
             </div>
@@ -162,7 +164,7 @@
             <section class="container mt-5">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-12 mb-4">
-                        <iframe
+                        <!-- <iframe
                             class="rounded-md w-100"
                             height="315"
                             src="https://www.youtube.com/embed/f8ZzdPJ6gC0"
@@ -171,21 +173,43 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin"
                             allowfullscreen
-                        ></iframe>
+                        ></iframe> -->
+
+                        <video
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            style="
+                                width: 100%;
+                                border-radius: 12px;
+                                height: 350px;
+                                object-fit: cover;
+                            "
+                        >
+                            <source
+                                src="./src/video/COFFEE B ROLL - Daniel Schiffer Inspired.mp4"
+                                type="video/mp4"
+                            />
+                            Trình duyệt của bạn không hỗ trợ video.
+                        </video>
                     </div>
                     <div class="col-lg-6 col-12">
                         <h2 class="text-color-primary">
                             Chill Coffee - Vị cà phê, chất chill
                         </h2>
                         <p class="text-muted">
-                            Nơi bắt đầu ngày mới thật chill, với hương vị đậm đà và không gian đầy cảm hứng.
+                            Nơi bắt đầu ngày mới thật chill, với hương vị đậm đà
+                            và không gian đầy cảm hứng.
                         </p>
                     </div>
                 </div>
             </section>
 
             <section class="container my-3 my-md-5">
-                <h3 class="text-center mb-3 mb-md-4 text-color-primary">Sản phẩm mới nhất</h3>
+                <h3 class="text-center mb-3 mb-md-4 text-color-primary">
+                    Sản phẩm mới nhất
+                </h3>
                 <div class="product-list row g-4 py-4">
                     <!-- <div class="product-item col-md-3 col-6">
                     <div class="content p-2">
@@ -234,15 +258,18 @@
                                     alt="Chill Coffee Logo"
                                     class="icon"
                                 />
-                                <p class="title">
-                                    <span class="title strong">Chill</span>
-                                    Coffee
-                                </p>
+                                <p class="title">Chill Coffee</p>
                             </a>
-                            <p class="pt-3">"Chill Coffee – nơi không gian và hương vị hoà quyện, mang đến cho bạn những phút giây thư giãn tuyệt vời."</p>
+                            <p class="pt-3">
+                                "Chill Coffee – nơi không gian và hương vị hoà
+                                quyện, mang đến cho bạn những phút giây thư giãn
+                                tuyệt vời."
+                            </p>
                         </div>
                         <div class="col-md-3">
-                            <h5 class="mt-4 mt-sm-0 text-center text-sm-start">Liên hệ</h5>
+                            <h5 class="mt-4 mt-sm-0 text-center text-sm-start">
+                                Liên hệ
+                            </h5>
                             <p class="mt-3">
                                 Địa chỉ: Số ... phố Lê Thanh Nghị, Hai Bà Trưng,
                                 Hà Nội
@@ -256,7 +283,9 @@
                             <p>Giờ mở cửa: 8:00 - 22:00</p>
                         </div>
                         <div class="col-md-3">
-                            <h5 class="mt-4 mt-sm-0 text-center text-sm-start">Đăng ký nhận tin</h5>
+                            <h5 class="mt-4 mt-sm-0 text-center text-sm-start">
+                                Đăng ký nhận tin
+                            </h5>
                             <div class="input-group mt-3 mb-3">
                                 <input
                                     type="email"
@@ -269,8 +298,12 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <h5 class="mt-4 mt-sm-0 text-center text-sm-start">Theo dõi Chill Coffee</h5>
-                            <ul class="d-flex align-items-center list-unstyled mt-3 justify-content-sm-start">
+                            <h5 class="mt-4 mt-sm-0 text-center text-sm-start">
+                                Theo dõi Chill Coffee
+                            </h5>
+                            <ul
+                                class="d-flex align-items-center list-unstyled mt-3 justify-content-sm-start"
+                            >
                                 <li>
                                     <a href="#!" class="icon text-white fs-5">
                                         <i class="fa-brands fa-facebook"></i>
@@ -282,7 +315,9 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#!" class="icon text-white fs-5"><i class="fa-brands fa-youtube"></i></a>
+                                    <a href="#!" class="icon text-white fs-5"
+                                        ><i class="fa-brands fa-youtube"></i
+                                    ></a>
                                 </li>
                             </ul>
                         </div>

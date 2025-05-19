@@ -122,6 +122,5 @@ async function loadOrders() {
     orderTableBody.innerHTML = '<tr><td colspan="5" class="text-center">Lỗi tải dữ liệu đơn hàng.</td></tr>';
   }
 }
-
 // Gọi hàm tải đơn hàng ngay lập tức
 loadOrders();

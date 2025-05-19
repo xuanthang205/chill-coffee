@@ -1,7 +1,7 @@
 :root {
     /* --color-primary: #66a0da; */
     --color-primary: #df911d;
-    --color-danger: #C80036;
+    --color-danger: #c80036;
     --color-black: #000;
     --color-white: #fff;
     --color-grey: #5c5c5e;
@@ -9,9 +9,9 @@
     --color-title: #784236;
 }
 
-
 body {
     font-family: "Poppins", sans-serif !important;
+    background-color: #fef6e4;
 }
 
 .logo {
@@ -28,22 +28,16 @@ body {
 }
 
 .logo .title {
-    display: flex;
-    flex-direction: column;
+    width: 80px;
     margin-bottom: 0;
-    /* color: #EFEFEF; */
     font-size: 22px;
     font-weight: 600;
     line-height: 125%;
 
-    background: linear-gradient(to right, #FFD700, #FF8C00);
+    background: linear-gradient(to right, #ffd700, #ff8c00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-/* .logo .title.strong {
-    color:#FFD384;
-} */
 
 @media (max-width: 575.98px) {
     .logo .icon {
@@ -95,7 +89,6 @@ body {
     min-height: 100vh;
 }
 
-
 /* Dành cho page admin, admin_orders  */
 .sidebar {
     background-color: #737373;
@@ -133,11 +126,9 @@ body {
 
 .product-list .product-item .title {
     height: calc(2em * 1.2);
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    
-      
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
