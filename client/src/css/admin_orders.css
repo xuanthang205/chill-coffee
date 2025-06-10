@@ -10,22 +10,22 @@
 }
 
 .table th, .table td {
-  vertical-align: middle; /* Căn giữa theo chiều dọc */
-  padding: 12px; /* Tăng padding cho thoải mái */
+  vertical-align: middle;
+  padding: 12px;
 }
 
 .table tbody tr {
-  transition: background-color 0.2s ease; /* Hiệu ứng hover mượt mà */
+  transition: background-color 0.2s ease;
 }
 
 .table tbody tr:hover {
-  background-color: #f5f5f5; /* Màu nền khi hover */
+  background-color: #f5f5f5;
 }
 
 /* Tùy chỉnh select trạng thái */
 .slt-order-status {
   padding: 6px 12px;
-  border-radius: 4px; /* Dùng rounded-sm từ main.css */
+  border-radius: 4px;
   border: 1px solid var(--color-grey);
   background-color: var(--color-white);
   /* color: var(--color-black); */
@@ -41,24 +41,24 @@
 .slt-order-status:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 4px rgba(127, 161, 195, 0.5); /* Dùng màu primary nhạt */
+  box-shadow: 0 0 4px rgba(127, 161, 195, 0.5);
 }
 
 /* Màu sắc khác nhau cho từng trạng thái */
 .slt-order-status option[value="0"] {
-  color: #ff9800; /* Chờ xác nhận: Cam */
+  color: #ff9800;
 }
 
 .slt-order-status option[value="1"] {
-  color: #2196f3; /* Chờ vận chuyển: Xanh dương */
+  color: #2196f3;
 }
 
 .slt-order-status option[value="2"] {
-  color: #4caf50; /* Đã nhận hàng: Xanh lá */
+  color: #4caf50;
 }
 
 .slt-order-status option[value="3"] {
-  color: var(--color-danger); /* Đã hủy: Đỏ từ main.css */
+  color: var(--color-danger);
 }
 
 /* Tùy chỉnh giao diện dòng sản phẩm */

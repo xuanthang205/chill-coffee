@@ -22,7 +22,7 @@
   #balance-form .form-control:focus,
   #balance-form select:focus {
     border-color: var(--color-primary);
-    box-shadow: 0 0 5px rgba(127, 161, 195, 0.5); /* Dùng màu primary nhạt */
+    box-shadow: 0 0 5px rgba(127, 161, 195, 0.5);
   }
   
   .transaction-history {

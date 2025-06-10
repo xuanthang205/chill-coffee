@@ -1,8 +1,4 @@
 body {
-    /* background-image: url('../img/background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
     min-height: 100vh;
 }
 
@@ -60,7 +56,6 @@ body {
 }
 
 .col-md-6 {
-    /* background: rgba(0, 0, 0, 0.8); */
     border-radius: 10px;
     padding: 40px;
 }
@@ -114,7 +109,6 @@ h5 {
 }
 
 .form-control {
-    /* background: #232a31; */
     border-radius: 10px;
     border: 1px solid #d2d1d6;
     padding: 12px 15px 12px 40px;
@@ -127,7 +121,6 @@ h5 {
 }
 
 .form-control:focus {
-    /* background: #fff; */
     color: #333;
     box-shadow: none;
     border-color: #77dae6;
