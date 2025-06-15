@@ -35,7 +35,7 @@
                             <span>Trở lại</span>
                         </a>
                         <h5>Đăng nhập</h5>
-                        <form id="login-form">
+                        <form id="login-form" class="login-form">
                             <div class="mb-3 form-group">
                                 <div class="input-wrapper">
                                     <span class="icon"><i class="fas fa-envelope"></i></span>
@@ -46,8 +46,10 @@
                                 <div class="input-wrapper">
                                     <span class="icon"><i class="fas fa-lock"></i></span>
                                     <input type="password" class="form-control inp-pwd" id="password" placeholder="Nhập mật khẩu">
+                                    <button type="button" class="show-password"><i class="fa-solid fa-eye"></i></button>
                                 </div>
-                            </div>  
+                            </div>
+                            <a href="./forgot-pasword.html" class="forgot-link">Quên mật khẩu?</a>  
                             <button type="submit" class="btn btn-primary btn-auth">Đăng nhập</button>
                             <p class="login-link mt-3 text-center">Đã chưa có tài khoản? <a href="./register.html">Đăng ký</a></p>
                         </form>
@@ -57,5 +59,6 @@
         </div>
     </main>
     <script type="module" src="./src/js/login.js"></script>
+    <script src="./src/js/auth.js"></script>
 </body>
 </html>

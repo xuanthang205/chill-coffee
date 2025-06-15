@@ -45,8 +45,12 @@ async function handleLogin(event) {
         }
 
     } catch (error) {
-        alert("Lỗi: " + error.message);
+    if (error.code === "auth/invalid-credential" || error.code === "auth/user-not-found" || error.code === "auth/wrong-password") {
+        alert("Email hoặc mật khẩu không đúng");
+    } else {
+        alert("Lỗi đăng nhập: " + error.message);
     }
+}
 }
 
 loginForm.addEventListener("submit", handleLogin);

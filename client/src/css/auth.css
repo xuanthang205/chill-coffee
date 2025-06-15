@@ -50,8 +50,8 @@ body {
 }
 
 .auth-logo .icon {
-    width:40px;
-    height:40px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 
@@ -133,6 +133,16 @@ h5 {
     font-size: 16px;
 }
 
+.input-wrapper .show-password{
+    display: flex;
+    padding: 10px;
+    position: absolute;
+    right: 0px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
 .btn-auth {
     width: 100%;
     padding: 12px;
@@ -156,9 +166,21 @@ h5 {
     font-weight: 500;
 }
 
+.forgot-link:hover,
 .login-link a:hover {
     text-decoration: underline;
     color: #0056b3;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.forgot-link {
+    align-self: flex-end;
+    text-decoration: none;
+    color: #007bff;
 }
 
 /* Responsive adjustments */

@@ -1,4 +1,3 @@
-// src/js/wallet.js
 import { auth, db } from './firebase-config.js';
 import { collection, query, where, getDocs, updateDoc, doc, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js';
 import { checkSession } from './check-session.js';

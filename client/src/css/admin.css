@@ -21,3 +21,7 @@
 .content-admin {
     margin-left: 16.67%;
 }
+
+.product-form .btn-cancel{
+    margin-bottom: 0;
+}

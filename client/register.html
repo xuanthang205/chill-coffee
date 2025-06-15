@@ -38,7 +38,7 @@
                             <div class="mb-3 form-group">
                                 <div class="input-wrapper">
                                     <span class="icon"><i class="fas fa-user"></i></span>
-                                    <input type="text" class="form-control inp-username" id="username" placeholder="Name">
+                                    <input type="text" class="form-control inp-username" id="username" placeholder="Họ tên">
                                 </div>
                             </div>
                             <div class="mb-3 form-group">
@@ -50,14 +50,16 @@
                             <div class="mb-3 form-group">
                                 <div class="input-wrapper">
                                     <span class="icon"><i class="fas fa-lock"></i></span>
-                                    <input type="password" class="form-control inp-pwd" id="password" placeholder="Password">
+                                    <input type="password" class="form-control inp-pwd" id="password" placeholder="Mật khẩu">
+                                    <button type="button" class="show-password"><i class="fa-solid fa-eye"></i></button>
                                 </div>
                             </div>
                             <div class="mb-3 form-group">
                                 <div class="input-wrapper">
                                     <span class="icon"><i class="fas fa-lock"></i></span>
                                     <input type="password" class="form-control inp-cf-pw" id="confirm-password"
-                                        placeholder="Confirm password">
+                                        placeholder="Nhập lại mật khẩu">
+                                    <button type="button" class="show-password"><i class="fa-solid fa-eye"></i></button>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary btn-auth">Đăng ký</button>
@@ -69,5 +71,6 @@
         </div>
     </main>
     <script type="module" src="./src/js/register.js"></script>
+    <script src="./src/js/auth.js"></script>
 </body>
 </html>

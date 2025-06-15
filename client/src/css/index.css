@@ -237,7 +237,7 @@ footer .icon i:hover {
     font-size: 24px;
 }
 
-.search-wrap {
+/* .search-wrap {
     width: min(500px, 100%);
     margin-left: auto;
 }
@@ -289,7 +289,7 @@ footer .icon i:hover {
 
 .search-wrap .search-input:placeholder-shown ~ .clear-input-btn {
     display: none;
-}
+} */
 
 .search-sort {
     background-color: #fff;
