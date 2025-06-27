@@ -1,16 +1,6 @@
 // src/js/admin.js
 import { auth, db } from "./firebase-config.js";
-import {
-    collection,
-    getDocs,
-    addDoc,
-    deleteDoc,
-    doc,
-    serverTimestamp,
-    where,
-    query,
-    updateDoc,
-} from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+import { collection, getDocs, addDoc, deleteDoc, doc, serverTimestamp, where, query, updateDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 import { checkSession } from "./check-session.js";
 
 let userSession = JSON.parse(localStorage.getItem("user_session"));
@@ -39,10 +29,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         querySnapshot.forEach((doc) => {
             const user = doc.data();
-            if (user.role_id !== 1) {
+            if (user.role_id !== 1 && user.role_id !== 2) {
                 alert("Bạn không có quyền truy cập!");
                 window.location.href = "./index.html";
             }
+
+            // if (user.role_id === 1) {
+            //     const roleLi = document.getElementById("li-role");
+            //     const roleProd = document.getElementById("li-prod");
+            //     if (roleLi && roleProd) {
+            //         roleLi.classList.remove("d-none");
+            //         roleProd.classList.remove("d-none")
+            //     }
+            // }
         });
 
         await loadProducts();
@@ -83,9 +82,7 @@ document.getElementById("product-form").addEventListener("submit", async (event)
         }));
 
         const currentName = productName.toLowerCase().trim();
-        const isDuplicate = allProducts.some(
-            (p) => p.name === currentName && p.id !== editProductId
-        );
+        const isDuplicate = allProducts.some((p) => p.name === currentName && p.id !== editProductId);
 
         if (isDuplicate) {
             alert("Sản phẩm đã tồn tại. Vui lòng chọn tên khác!");
@@ -132,7 +129,6 @@ document.getElementById("product-form").addEventListener("submit", async (event)
 
         document.getElementById("product-form").reset();
         await loadProducts(); // Giao diện render lại sau khi xong
-
     } catch (error) {
         console.error("Lỗi khi lưu sản phẩm:", error);
         alert("❌ Có lỗi xảy ra khi lưu sản phẩm!");
@@ -143,7 +139,6 @@ document.getElementById("product-form").addEventListener("submit", async (event)
         spinner.classList.add("d-none");
     }
 });
-
 
 // Load và hiển thị danh sách sản phẩm
 async function loadProducts() {
@@ -233,9 +228,7 @@ function setupSearchFeature() {
         let filtered = [...allProductsCache];
 
         if (keyword !== "") {
-            filtered = filtered.filter((p) =>
-                p.name.toLowerCase().includes(keyword)
-            );
+            filtered = filtered.filter((p) => p.name.toLowerCase().includes(keyword));
         } else {
             // Khôi phục lại thứ tự gốc
             filtered.sort((a, b) => {
@@ -314,5 +307,3 @@ function setupSearchFeature() {
         });
     }
 }
-
-

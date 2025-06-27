@@ -79,6 +79,10 @@ body {
     text-decoration: none;
 }
 
+.logo-container:focus {
+    box-shadow: none !important;
+}
+
 .logo-container > span {
     font-size: 16px;
 }
@@ -133,7 +137,7 @@ h5 {
     font-size: 16px;
 }
 
-.input-wrapper .show-password{
+.input-wrapper .show-password {
     display: flex;
     padding: 10px;
     position: absolute;
@@ -152,6 +156,12 @@ h5 {
     transition: background 0.3s ease;
     margin-top: 10px;
     text-transform: uppercase;
+    box-shadow: none !important;
+}
+
+.btn-auth:focus {
+    box-shadow: none;
+    border: none;
 }
 
 /* Login link styles */

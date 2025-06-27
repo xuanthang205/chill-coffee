@@ -190,10 +190,6 @@
         text-align: center;
     }
 
-    .banner-text .title {
-        font-size: 50px;
-    }
-
     .banner-text .desc {
         width: 100%;
         font-size: 16px;
@@ -202,5 +198,11 @@
     .banner-decor {
         width: 100%;
         padding-top: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .banner-text .title {
+        font-size: 50px;
     }
 }

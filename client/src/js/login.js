@@ -1,6 +1,6 @@
-import { auth, db } from './firebase-config.js';
-import { signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js';
-import { collection, query, where, getDocs } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js';
+import { auth, db } from "./firebase-config.js";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+import { collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 
 const inpEmail = document.querySelector(".inp-email");
 const inpPwd = document.querySelector(".inp-pwd");
@@ -29,28 +29,32 @@ async function handleLogin(event) {
             const docSnap = querySnapshot.docs[0];
             const userData = docSnap.data();
 
+            if (userData.is_disabled === true) {
+                alert("Tài khoản của bạn đã bị khoá. Vui lòng liên hệ quản lý hoặc nhân viên.");
+                return;
+            }
+
             const userSession = {
                 user: {
                     email: user.email,
-                    id: userData.role_id
+                    id: userData.role_id,
                 },
                 expiry: new Date().getTime() + 2 * 60 * 60 * 1000, // 2 giờ
             };
 
-            localStorage.setItem('user_session', JSON.stringify(userSession));
+            localStorage.setItem("user_session", JSON.stringify(userSession));
             alert("Đăng nhập thành công");
             window.location.href = "index.html";
         } else {
             alert("Không tìm thấy thông tin người dùng trong Firestore.");
         }
-
     } catch (error) {
-    if (error.code === "auth/invalid-credential" || error.code === "auth/user-not-found" || error.code === "auth/wrong-password") {
-        alert("Email hoặc mật khẩu không đúng");
-    } else {
-        alert("Lỗi đăng nhập: " + error.message);
+        if (error.code === "auth/invalid-credential" || error.code === "auth/user-not-found" || error.code === "auth/wrong-password") {
+            alert("Email hoặc mật khẩu không đúng");
+        } else {
+            alert("Lỗi đăng nhập: " + error.message);
+        }
     }
-}
 }
 
 loginForm.addEventListener("submit", handleLogin);
