@@ -7,6 +7,10 @@
         justify-content: center;
     }
 
+    .banner-decor {
+        bottom: -20px;
+    }
+
     .banner-text .title {
         font-size: 40px;
     }
