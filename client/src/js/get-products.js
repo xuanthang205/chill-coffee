@@ -35,7 +35,7 @@ function renderProductList(container, productList) {
                 <div class="content p-3 d-flex flex-column justify-content-between">
                     <h5 class="mb-1 text-uppercase text-center title">${product.name}</h5>
                     <p class="mb-0 text-center mt-auto">Giá: <span class="fs-6 fw-semibold text-danger">${formatter.format(product.price)}</span></p>
-                    <button class="btn btn-primary btn-order" data-id="${product.id}">Đặt hàng</button>
+                    <button class="btn btn-primary btn-order" data-id="${product.id}">Đặt ngay</button>
                 </div>
             </div>
         </div>
@@ -121,6 +121,11 @@ async function showOrderForm(productId) {
                                     <option value="3">Bàn 3</option>
                                     <option value="4">Bàn 4</option>
                                     <option value="5">Bàn 5</option>
+                                    <option value="6">Bàn 6</option>
+                                    <option value="7">Bàn 7</option>
+                                    <option value="8">Bàn 8</option>
+                                    <option value="9">Bàn 9</option>
+                                    <option value="10">Bàn 10</option>
                                 </select>
                             </div>
 
@@ -191,18 +196,3 @@ async function handleOrder(productId, quantity, price, tableNumber) {
         console.error("Lỗi đặt hàng: ", error);
     }
 }
-
-//<div class="content p-3 p-sm-4 h-100 d-flex flex-column justify-content-between">
-//     <div>
-//         <figure class="overflow-hidden mb-0" style="border-radius: 8px;">
-//             <img src="${product.imageUrl}" alt="${product.name}" loading="lazy">
-//         </figure>
-//         <div class="text p-2 p-sm-3">
-//             <div class="d-flex flex-column align-items-center">
-//                 <h5 class="mb-1 text-uppercase text-center title">${product.name}</h5>
-//                 <p class="mb-0">Giá: <span class="fs-6 fw-semibold text-danger">${formatter.format(product.price)}</span></p>
-//             </div>
-//         </div>
-//     </div>
-//     <button class="btn btn-primary btn-order" data-id="${product.id}">Đặt hàng</button>
-// </div>

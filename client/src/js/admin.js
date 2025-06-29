@@ -33,15 +33,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 alert("Bạn không có quyền truy cập!");
                 window.location.href = "./index.html";
             }
-
-            // if (user.role_id === 1) {
-            //     const roleLi = document.getElementById("li-role");
-            //     const roleProd = document.getElementById("li-prod");
-            //     if (roleLi && roleProd) {
-            //         roleLi.classList.remove("d-none");
-            //         roleProd.classList.remove("d-none")
-            //     }
-            // }
         });
 
         await loadProducts();
@@ -68,7 +59,7 @@ document.getElementById("product-form").addEventListener("submit", async (event)
     }
 
     try {
-        // 🚫 Disable UI và hiển thị đang xử lý
+        // Disable UI và hiển thị đang xử lý
         saveBtn.disabled = true;
         saveBtn.innerText = "Đang lưu...";
         spinner.classList.remove("d-none");
@@ -131,9 +122,9 @@ document.getElementById("product-form").addEventListener("submit", async (event)
         await loadProducts(); // Giao diện render lại sau khi xong
     } catch (error) {
         console.error("Lỗi khi lưu sản phẩm:", error);
-        alert("❌ Có lỗi xảy ra khi lưu sản phẩm!");
+        alert("Có lỗi xảy ra khi lưu sản phẩm!");
     } finally {
-        // ✅ Luôn khôi phục UI dù thành công hay lỗi
+        // Luôn khôi phục UI dù thành công hay lỗi
         saveBtn.disabled = false;
         saveBtn.innerText = "Lưu";
         spinner.classList.add("d-none");

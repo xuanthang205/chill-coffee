@@ -1,112 +1,119 @@
 /* Cải thiện giao diện bảng */
 .product-table {
-  background-color: var(--color-white);
+    background-color: var(--color-white);
 }
-
 
 .table {
-  border-collapse: separate;
-  border-spacing: 0;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
-.table th, .table td {
-  vertical-align: middle;
-  padding: 12px;
+.table th,
+.table td {
+    vertical-align: middle;
+    padding: 12px;
 }
 
 .table tbody tr {
-  transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 .table tbody tr:hover {
-  background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 
 /* Tùy chỉnh select trạng thái */
 .slt-order-status {
-  padding: 6px 12px;
-  border-radius: 4px;
-  border: 1px solid var(--color-grey);
-  background-color: var(--color-white);
-  /* color: var(--color-black); */
-  font-size: 14px;
-  cursor: pointer;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--color-grey);
+    background-color: var(--color-white);
+    /* color: var(--color-black); */
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .slt-order-status:hover {
-  border-color: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
 .slt-order-status:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 4px rgba(127, 161, 195, 0.5);
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 4px rgba(127, 161, 195, 0.5);
 }
 
 /* Màu sắc khác nhau cho từng trạng thái */
 .slt-order-status option[value="0"] {
-  color: #ff9800;
+    color: #ff9800;
 }
 
 .slt-order-status option[value="1"] {
-  color: #2196f3;
+    color: #2196f3;
 }
 
 .slt-order-status option[value="2"] {
-  color: #4caf50;
+    color: #4caf50;
 }
 
 .slt-order-status option[value="3"] {
-  color: var(--color-danger);
+    color: var(--color-danger);
 }
 
 /* Tùy chỉnh giao diện dòng sản phẩm */
-.product-item td, .product-item th {
-  border-bottom: 1px solid var(--color-grey-light);
+.product-item td,
+.product-item th {
+    border-bottom: 1px solid var(--color-grey-light);
 }
 
 .product-item th {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 .content-admin {
-  margin-left: 16.67%;
+    margin-left: 16.67%;
 }
 
-.order-input-wrap{
-  flex-grow: 1;
-  align-items: center;
-  padding: 0 6px;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
+.order-input-wrap {
+    flex-grow: 1;
+    align-items: center;
+    padding: 0 6px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
 }
 
-.order-input-wrap:focus-within{
-  border-color: #000;
+.order-input-wrap:focus-within {
+    border-color: #000;
 }
 
-.order-input-wrap .form-control{
-  border: none;
+.order-input-wrap .form-control {
+    border: none;
 }
 
-.order-input-wrap .form-control:focus{
-  box-shadow: none;
+
+#table-filter:focus {
+    border-color: #000;
 }
 
-#table-filter:focus{
-  box-shadow: none;
-  border-color: #000;
+.clear-input-btn {
+    display: none;
 }
 
-.clear-input-btn{
-  display: none;
+.order-input-wrap .form-control:not(:placeholder-shown) ~ .clear-input-btn {
+    display: block;
 }
 
-.order-input-wrap .form-control:not(:placeholder-shown) ~ .clear-input-btn{
-  display: block;
+.order-input-wrap .form-control:not(:placeholder-shown) + .search-icon {
+    display: none;
 }
 
-.order-input-wrap .form-control:not(:placeholder-shown) + .search-icon{
-  display: none;
+#status-filter {
+    border-radius: 4px;
+    border-color: #ced4da;
+}
+
+#status-filter:focus {
+    outline: none;
+    border-color: #000;
 }

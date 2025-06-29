@@ -15,16 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Build dropdown html theo role_id
       let dropdownHtml = ``;
 
-      if (userSession.user.id === 1) {
-        dropdownHtml += `
-          <li class="bg-grey-light"><span class="dropdown-item name">${userSession.user.email}</span></li>
-          <li><a class="dropdown-item" href="./order_history.html">Lịch sử đơn hàng</a></li>
-          <li><a class="dropdown-item" href="./wallet.html">Ví</a></li>
-          <li><a class="dropdown-item" href="./admin_order.html">Trang Admin</a></li>
-          <li><a class="dropdown-item" href="./change-password.html">Đổi mật khẩu</a></li>
-          <li><button id="logout-btn" class="btn text-danger w-100 text-start">Đăng xuất</button></li>
-        `;
-      } else if (userSession.user.id === 2) {
+      if (userSession.user.id === 1 || userSession.user.id === 2) {
         dropdownHtml += `
           <li class="bg-grey-light"><span class="dropdown-item name">${userSession.user.email}</span></li>
           <li><a class="dropdown-item" href="./order_history.html">Lịch sử đơn hàng</a></li>

@@ -23,14 +23,13 @@ header .profile button {
 
 .banner-group {
     width: 100%;
-    background-color: #6E4B3A;
-
+    background-color: #6e4b3a;
 }
 
-.banner-decor{
+.banner-decor {
     position: relative;
     right: 0;
-    bottom: 0;
+    bottom: -46px;
     width: 55%;
     margin: 0;
     padding-top: 55%;
@@ -47,10 +46,11 @@ header .profile button {
 
 .banner-content {
     position: relative;
+    padding-top: 24px;
 }
 
 .banner-btn {
-    background-color: #E0A96D;
+    background-color: #e0a96d;
 }
 
 .banner-text {
@@ -98,13 +98,12 @@ header .profile button {
 .product-list .product-item .item-container {
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.product-list .item-container:hover img{
+.product-list .item-container:hover img {
     scale: 1.1;
 }
 
@@ -121,8 +120,30 @@ header .profile button {
 }
 
 .btn-order {
+    position: relative;
+    z-index: 0;
     width: 70%;
     margin: 10px auto 0;
+    overflow: hidden;
+}
+
+.btn-order::after {
+    position: absolute;
+    background-color: #38cb89;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    left: auto;
+    transition: all 0.3s ease;
+    content: "";
+}
+
+.btn-order:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
 }
 
 /* Order form */
@@ -250,5 +271,3 @@ footer .icon i:hover {
     outline: none;
     border: 1px solid #2e2a2a;
 }
-
-
