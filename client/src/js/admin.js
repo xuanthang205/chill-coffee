@@ -5,7 +5,7 @@ import { checkSession } from "./check-session.js";
 
 let userSession = JSON.parse(localStorage.getItem("user_session"));
 let editProductId = null;
-let allProductsCache = []; // ✅ Cache toàn bộ sản phẩm sau khi load
+let allProductsCache = []; // Cache toàn bộ sản phẩm sau khi load
 
 checkSession();
 
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
 
         await loadProducts();
-        setupSearchFeature(); // ✅ Gắn chức năng tìm kiếm và clear sau khi load
+        setupSearchFeature(); // Gắn chức năng tìm kiếm và clear sau khi load
     } catch (error) {
         console.error("Lỗi khi kiểm tra quyền truy cập:", error);
         alert("Có lỗi xảy ra khi kiểm tra quyền truy cập!");
@@ -149,7 +149,7 @@ async function loadProducts() {
             return a.createdAt.seconds - b.createdAt.seconds;
         });
 
-        allProductsCache = products; // ✅ Gán cache để tìm kiếm dùng
+        allProductsCache = products; // Gán cache để tìm kiếm dùng
 
         products.forEach((product, index) => {
             htmls += `
@@ -207,7 +207,7 @@ async function loadProducts() {
     }
 }
 
-// ✅ Tìm kiếm và Clear
+// Tìm kiếm và Clear
 function setupSearchFeature() {
     const input = document.getElementById("admin-search");
     const clearBtn = document.getElementById("clearInput");

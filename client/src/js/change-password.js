@@ -12,7 +12,6 @@ let currentUser = null;
 // Theo dõi trạng thái đăng nhập
 onAuthStateChanged(auth, (user) => {
     if (!user) {
-        // alert("Bạn chưa đăng nhập. Vui lòng đăng nhập lại.");
         window.location.href = "login.html";
     } else {
         currentUser = user;
@@ -49,7 +48,7 @@ form.addEventListener("submit", async (e) => {
         const credential = EmailAuthProvider.credential(currentUser.email, currentPassword);
         await reauthenticateWithCredential(currentUser, credential);
 
-        // ✅ Thêm kiểm tra: mật khẩu mới phải khác mật khẩu cũ
+        // Kiểm tra mật khẩu mới phải khác mật khẩu cũ
         if (currentPassword === newPassword) {
             alert("Mật khẩu mới phải khác mật khẩu hiện tại.");
             return;
